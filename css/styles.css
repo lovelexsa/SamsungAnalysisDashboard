@@ -1,0 +1,178 @@
+:root {
+    --samsung-blue: #0f4ef7;
+    --samsung-dark: #0a1e44;
+    --samsung-light: #ebf1ff;
+    --text: #1f2f57;
+    --text-muted: #65709f;
+    --card: #ffffff;
+    --accent: #24c1ff;
+    --border: #d8e2ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(160deg, #0f4ef7 0%, #141742 55%, #0a1e44 100%);
+    color: var(--text);
+}
+
+header.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: rgba(7, 9, 34, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+header .brand h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+header .icon {
+    width: 36px;
+    height: 36px;
+}
+
+nav {
+    display: flex;
+    gap: 0.8rem;
+}
+
+nav a {
+    color: #dce6ff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.7rem;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+main {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.section {
+    margin-bottom: 1.6rem;
+    background: rgba(13, 19, 63, 0.65);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 1rem;
+    backdrop-filter: blur(8px);
+}
+
+.section h2 {
+    color: #e7f0ff;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
+}
+
+.card {
+    background: linear-gradient(145deg, #10255f, #142c72);
+    border: 1px solid rgba(188, 213, 255, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    color: #e8efff;
+    box-shadow: 0 10px 24px rgba(2, 14, 41, 0.33);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #b6c8ff;
+}
+
+.card p {
+    margin: 0.45rem 0 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.chart-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+.chart-card h3 {
+    margin: 0 0 0.8rem;
+    color: var(--samsung-dark);
+}
+
+.chart-card canvas {
+    width: 100% !important;
+    min-height: 260px;
+}
+
+.insights-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #f1f6ff;
+}
+
+.insights-list li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    color: #d8e2ff;
+    margin: 1.2rem 0 2rem;
+    padding: 0.2rem;
+}
+
+@media (max-width: 800px) {
+    header.header-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 1rem;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .card p {
+        font-size: 1.25rem;
+    }
+}

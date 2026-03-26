@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>Samsung Global Sales Analysis Dashboard</title>
+    </head>
+    <body onload="initializeDashboard()">
+        <header class="header-main">
+            <div class="brand">
+                <img src="../img/icon.png" class="icon" alt="Samsung">
+                <h1>Samsung Global Sales Dashboard</h1>
+            </div>
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#analytics">Analytics</a>
+                <a href="#insights">Insights</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="overview" class="section">
+                <h2>Overview</h2>
+                <div class="cards" id="overviewCards">
+                    <article class="card">
+                        <h3>Total Revenue</h3>
+                        <p id="totalRevenue">$0</p>
+                    </article>
+                    <article class="card">
+                        <h3>Total Units Sold</h3>
+                        <p id="totalUnits">0</p>
+                    </article>
+                    <article class="card">
+                        <h3>Top Region</h3>
+                        <p id="topRegion">-</p>
+                    </article>
+                    <article class="card">
+                        <h3>Top Product Category</h3>
+                        <p id="topCategory">-</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="analytics" class="section">
+                <h2>Analytics</h2>
+                <div class="grid-layout">
+                    <div class="chart-card">
+                        <h3>Monthly Revenue Trend</h3>
+                        <canvas id="monthlyRevenueChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Revenue by Category</h3>
+                        <canvas id="categoryRevenueChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Revenue by Region</h3>
+                        <canvas id="regionRevenueChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Sales by Age Group</h3>
+                        <canvas id="ageGroupChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Revenue by Customer Segment</h3>
+                        <canvas id="segmentRevenueChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>5G vs Non-5G Smartphone Sales</h3>
+                        <canvas id="fiveGChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="insights" class="section">
+                <h2>Key Insights</h2>
+                <ul id="keyInsights" class="insights-list">
+                    <li>Data is loaded from core computed analytics based on Samsung sales dataset patterns.</li>
+                    <li>Revenue peaks align with product launches and seasonal demand cycles.</li>
+                    <li>Top category and top region metrics provide direct strategic focal points for marketing.</li>
+                    <li>5G adoption is growing and is a key demand segment in smartphones.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Samsung Global Sales Dashboard | Data inspired by analysis notebook</p>
+        </footer>
+
+        <script src="../script/script.js"></script>
+    </body>
+</html>
